@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Какое сейчас время?</title>
+
+<script>
+	function UpdateTime() {
+let Time = new Date();
+let InputTime = document.getElementById('MyTime');
+
+	h = Time.getHours();
+	if ( h < 10 ) h = "0" + h;
+
+	m = Time.getMinutes();
+	
+	if ( m < 10 ) m = "0" + m;
+
+	s = Time.getSeconds();
+	if ( s < 10 ) s = "0" + s;
+
+	outString = h + ":" + m + ":" + s;
+	
+	InputTime.innerHTML = outString;
+
+	setTimeout("UpdateTime()",1000);
+
+	}
+
+</script>
+
+</head>
+
+<body onLoad="setTimeout('UpdateTime()',1000);">
+
+		<p>Сейчас <span id="MyTime"></span>.</p>
+</body>
+</html>

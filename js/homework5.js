@@ -17,3 +17,35 @@ function compare(a,b){
 compare(a,b); 
 
 /*--------------------------------------------*/
+
+
+/*----------------Задача 2 ------------------------*/
+range = function (a, b, step){
+  if(step === null) step = 1;
+  var range = [];
+  if(a<b){
+    for (var i = a; i<=b; i+=step)
+      range.push(i);
+  }else{
+    for (var i = a; i>=b; i+=step)
+      range.push(i);
+  }
+  return range;
+
+}
+console.log(range(1,10,2));
+
+/*------------------------------------------------------*/
+/*--------------------Задача 3------------------------------*/
+var student = {
+    name: "Alexey",
+    surname: "Mindric",
+    age: "25",
+    hobbies: ['football', 'cinema', 'books'],
+    university: "IFMO"
+};
+function studentCard(student){
+  console.log(student);
+}
+studentCard(student);
+/*--------------------------------------*/

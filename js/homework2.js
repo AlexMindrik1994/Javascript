@@ -84,31 +84,47 @@ if (number >= -999 && number <= -100) {
 	alert ("Число положительное трехсоставное");
 }
 */
+//--------------------------------------------------------
 
+//-----------------Задача 4-------------------------------
 
-/*let arr = [];
-let A = [12,4,3,10,1,20];
-let B = [-3,-7,-100,-33];
+/*for (var i = 0; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('ThreeFive');
+  } else if ( i % 3 === 0) {
+    console.log('Three');
+  } else if ( i % 5 === 0) {
+    console.log('Five');
+  } else {
+    console.log(i);
+  }
+}*/
 
-let C = A.concat(B);
-console.log (C);*/
+//-----------------------------------------------------------
 
-let D = [-12,4,3,10,1,20];
+//----------------Задача 5 -------------------------------------
 
-/*let min = D.sort ().shift ();
-console.log (D);
+/*let year = prompt('Введите год :');
 
-let max = D.sort ().pop ();
-console.log (D);*/
+if (year % 100 !== 0 && year % 4 === 0) {
+  alert(year + ' год - високосный')
+} else if (year % 400 === 0) {
+  alert(year + ' год - високосный')
+} else alert(year + ' год - не високосный');*/
 
-min = D[0];
-max = D[0];
+//--------------------Задача 6----------------------------------------
 
-for (let i =0; i < D.length; i++){
-	if (min > D[i]){
-		D.shift (D[i]);
-	} else if (max < D[i]){
-		D.pop (D[i]);
-	}
-}
-console.log (D);
+let plates = parseInt(prompt('Количество тарелок, шт.:'));
+let cleanser = parseFloat(prompt('Количество моющего средства:'));
+
+while (plates > 0 && cleanser >= 0.5) {
+  plates = plates - 1;
+  cleanser = cleanser - 0.5;
+};
+
+if (plates === 0 && cleanser > 0) {
+  console.log(`Все тарелки вымыты. Осталось ${cleanser} ед. моющего средства`);
+} else if (plates > 0 && cleanser < 0.5) {
+  console.log(`Моющее средство закончилось. Осталось ${plates} тарелок`)
+} else if (plates === 0 && cleanser === 0) {
+	console.log('Все тарелки вымыты, моющее средство закончилось');
